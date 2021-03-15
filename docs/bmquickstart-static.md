@@ -181,7 +181,7 @@ chmod o+r /var/www/html/ignition/*.ign
 
 > :warning: Read all the instructions before attempting to install RHCOS!
 
-Boot into your instance using the [RHCOS ISO Installer](https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/latest/4.4.3/)
+Boot into your instance using the [RHCOS ISO Installer](https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/latest/latest/)
 
 Once booted; press `tab` on the boot menu
 
