@@ -184,11 +184,11 @@ You can have the helper deploy specific artifacts for a paticular version of OCP
 > :warning: note, you need to use the `ocp_bios` var for the rootfs image for 4.6+
 
 ```
-ocp_bios: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/pre-release/latest/rhcos-42.80.20190828.2-metal-bios.raw.gz"
-ocp_initramfs: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/pre-release/latest/rhcos-42.80.20190828.2-installer-initramfs.img"
-ocp_install_kernel: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/pre-release/latest/rhcos-42.80.20190828.2-installer-kernel"
-ocp_client: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview/latest/openshift-client-linux-4.2.0-0.nightly-2019-09-16-114316.tar.gz"
-ocp_installer: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview/latest/openshift-install-linux-4.2.0-0.nightly-2019-09-16-114316.tar.gz"
+ocp_bios: "https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.7/4.7.0/rhcos-4.7.0-x86_64-live-rootfs.x86_64.img"
+ocp_initramfs: "https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.7/4.7.0/rhcos-4.7.0-x86_64-live-initramfs.x86_64.img"
+ocp_install_kernel: "https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.7/4.7.0/rhcos-4.7.0-x86_64-live-kernel-x86_64"
+ocp_client: "https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/latest-4.7/openshift-client-linux.tar.gz"
+ocp_installer: "https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/latest-4.7/openshift-install-linux.tar.gz"
 ```
 
 To find the latest nighly build links:
@@ -199,11 +199,11 @@ To find the latest nighly build links:
 You can also point these vars to files local to the helper. This is useful when doing a disconnected insall and you have "sneaker-netted" the artifacts over. For example:
 
 ```
-ocp_bios: "file:///tmp/rhcos-42.80.20190828.2-metal-bios.raw.gz"
-ocp_initramfs: "file:///tmp/rhcos-42.80.20190828.2-installer-initramfs.img"
-ocp_install_kernel: "file:///tmp/rhcos-42.80.20190828.2-installer-kernel"
-ocp_client: "file:///tmp/openshift-client-linux-4.2.0-0.nightly-2019-09-16-114316.tar.gz"
-ocp_installer: "file:///tmp/openshift-install-linux-4.2.0-0.nightly-2019-09-16-114316.tar.gz"
+ocp_bios: "file:///tmp/openshift-v4/x86_64/dependencies/rhcos/4.7/4.7.0/rhcos-4.7.0-x86_64-live-rootfs.x86_64.img"
+ocp_initramfs: "file:///tmp/openshift-v4/x86_64/dependencies/rhcos/4.7/4.7.0/rhcos-4.7.0-x86_64-live-initramfs.x86_64.img"
+ocp_install_kernel: "file:///tmp/openshift-v4/x86_64/dependencies/rhcos/4.7/4.7.0/rhcos-4.7.0-x86_64-live-kernel-x86_64"
+ocp_client: "file:///tmp/openshift-v4/x86_64/clients/ocp/latest-4.7/openshift-client-linux.tar.gz"
+ocp_installer: "file:///tmp/openshift-v4/x86_64/clients/ocp/latest-4.7/openshift-install-linux.tar.gz"
 ```
 
 The [default](../vars/main.yml#L4-L8) is to use the latest **stable** OpenShift 4 release.
